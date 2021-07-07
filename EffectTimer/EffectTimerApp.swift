@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct EffectTimerApp: App {
+    
+    let store = Store(initialState: AppState(), reducer: appReducer, environment: .live)
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(store: store)
         }
     }
 }

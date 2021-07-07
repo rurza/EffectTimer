@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		666CA4D226963074006BAE7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CA4D126963074006BAE7E /* ContentView.swift */; };
 		666CA4D426963075006BAE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666CA4D326963075006BAE7E /* Assets.xcassets */; };
 		666CA4D726963075006BAE7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666CA4D626963075006BAE7E /* Preview Assets.xcassets */; };
+		666CA4E12696309E006BAE7E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 666CA4E02696309E006BAE7E /* ComposableArchitecture */; };
+		666CA4E3269630AA006BAE7E /* TimerTCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CA4E2269630AA006BAE7E /* TimerTCA.swift */; };
+		666CA4E526963121006BAE7E /* AppTCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CA4E426963121006BAE7E /* AppTCA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,8 @@
 		666CA4D626963075006BAE7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		666CA4D826963075006BAE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		666CA4D926963075006BAE7E /* EffectTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EffectTimer.entitlements; sourceTree = "<group>"; };
+		666CA4E2269630AA006BAE7E /* TimerTCA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTCA.swift; sourceTree = "<group>"; };
+		666CA4E426963121006BAE7E /* AppTCA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTCA.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666CA4E12696309E006BAE7E /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				666CA4CF26963074006BAE7E /* EffectTimerApp.swift */,
+				666CA4E2269630AA006BAE7E /* TimerTCA.swift */,
+				666CA4E426963121006BAE7E /* AppTCA.swift */,
 				666CA4D126963074006BAE7E /* ContentView.swift */,
 				666CA4D326963075006BAE7E /* Assets.xcassets */,
 				666CA4D826963075006BAE7E /* Info.plist */,
@@ -87,6 +95,9 @@
 			dependencies = (
 			);
 			name = EffectTimer;
+			packageProductDependencies = (
+				666CA4E02696309E006BAE7E /* ComposableArchitecture */,
+			);
 			productName = EffectTimer;
 			productReference = 666CA4CC26963074006BAE7E /* EffectTimer.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 666CA4C326963074006BAE7E;
+			packageReferences = (
+				666CA4DF2696309E006BAE7E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 666CA4CD26963074006BAE7E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666CA4E526963121006BAE7E /* AppTCA.swift in Sources */,
+				666CA4E3269630AA006BAE7E /* TimerTCA.swift in Sources */,
 				666CA4D226963074006BAE7E /* ContentView.swift in Sources */,
 				666CA4D026963074006BAE7E /* EffectTimerApp.swift in Sources */,
 			);
@@ -333,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		666CA4DF2696309E006BAE7E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		666CA4E02696309E006BAE7E /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 666CA4DF2696309E006BAE7E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 666CA4C426963074006BAE7E /* Project object */;
 }

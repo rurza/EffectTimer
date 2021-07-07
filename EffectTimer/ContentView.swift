@@ -6,16 +6,17 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct ContentView: View {
+    
+    let store: Store<AppState, AppAction>
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        WithViewStore(store) { viewStore in
+            Text("\(viewStore.timerState.secondsElapsed)")
+                .padding(100)
+                .onAppear{ viewStore.send(.timerAction(.start)) }
+        }
     }
 }
